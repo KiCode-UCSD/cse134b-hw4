@@ -17,6 +17,7 @@
 }
 /* style switches for themes */
 :root.dark {
+    --default-text: white;
     --default-border: grey;
     --state-color: grey;
     --fade-color: hsl(0 0% 100% / 60%);
@@ -24,7 +25,7 @@
         radial-gradient(ellipse at top, var(--state-color) 0, white 60%) center top / 380% 120% no-repeat, white;
 }
 :root.light {
-    --button-txt: white;
+    --default-text: rgb(44, 44, 44);
     
     --default-border: rgb(13, 11, 13);
     --state-color: rgb(90, 86, 86);
@@ -96,6 +97,10 @@ body {
 
             p {
                 margin-top: 0.5rem;
+
+                span {
+                    color: var(--default-text);
+                }
             }
         }
 
